@@ -195,6 +195,9 @@ of a guarantee in the future.
   volume for re-use across containers
 * Addition of tls-auth for HMAC security
 
+## 2023: Differences from kylemanna/docker-openvpn
+* tls-auth replaced to tls-crypt
+
 ## Originally Tested On
 
 * Docker hosts:
