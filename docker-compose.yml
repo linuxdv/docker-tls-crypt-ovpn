@@ -1,0 +1,18 @@
+version: '2'
+services:
+  openvpn:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    cap_add:
+      - NET_ADMIN
+    image: local-vpn/openvpn
+    container_name: ovpn
+    ports:
+      - "1194:1194/udp"
+      - "1194:1194/tcp"
+    restart: always
+    volumes:
+      - local-vpn:/etc/openvpn
+volumes:
+  local-vpn:
